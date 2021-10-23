@@ -367,6 +367,7 @@ article .order svg {
   font-weight: 400;
   font-size: large;
   cursor: pointer;
+  display: none;
 }
 #cart .cart-btn:hover{
   background-color: var(--hoverorange);
