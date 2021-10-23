@@ -5,6 +5,7 @@
 }
 :root {
   --orange: hsl(26, 100%, 55%);
+  --hoverorange: hsl(26, 100%, 65%);
 }
 body {
   height: 100vh;
@@ -15,6 +16,8 @@ body {
 .container {
   width: 80%;
   height: 100vh;
+  position: relative;
+  max-width: 1440px;
 }
 
 nav {
@@ -41,7 +44,7 @@ nav ul {
   grid-template-columns: repeat(6, 1fr);
   grid-column-start: 3;
   grid-column-end: 5;
-  gap: 10px 10px;
+  column-gap: 10px;
 }
 
 nav ul li {
@@ -51,8 +54,26 @@ nav ul li {
   opacity: 0.8;
   padding: 10px;
   cursor: pointer;
+  width: 100%;
+  text-align:center;
 }
-
+nav ul li:hover{
+  color: var(--orange);
+  transition: 0.3s;
+}
+/* nav ul li::before {
+  content: "";
+  width: 86.4px;
+  height: 5px;
+  background-color: var(--orange);
+  display:none;
+  position: absolute;
+  bottom: 0px;
+  left: ;
+} */
+/* nav ul li:hover::before{
+  display: block;
+} */
 .avatar {
   width: 50px;
   height: auto;
@@ -69,6 +90,7 @@ nav ul li {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 20px;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -145,6 +167,10 @@ article .order {
   border-radius: 10px;
   cursor: pointer;
 }
+article .order:hover{
+  background-color: var(--hoverorange);
+  transition: 0.3s;
+}
 article .order #69707D {
   fill: white;
 }
@@ -160,6 +186,7 @@ article .order svg {
   height: 50px;
   text-align: center;
   float: left;
+  align-items: center;
 }
 .counter button {
   width: 100%;
@@ -167,6 +194,12 @@ article .order svg {
 .counter button {
   border: none;
   cursor: pointer;
+}
+.counter button svg path{
+  fill: var(--orange);
+}
+.counter  button:hover>  svg path{
+  fill: var(--hoverorange);
 }
 #amount {
   line-height: 3;
@@ -194,6 +227,11 @@ article .order svg {
 .gallery .thumbnails img{
     border-radius: 10px;
     cursor: pointer;
+    border: 2px solid transparent;
+}
+.gallery .thumbnails img:hover{
+  border-color: var(--orange);
+  opacity: 0.8;
 }
 .lightbox{
     width: 45%;
@@ -220,7 +258,6 @@ article .order svg {
   display: block;
 }
 
-/* .lightbox .previous-scroll, .lightbox .next-scroll  */
 .lightbox .thumbnails {
   width: 100%;
   margin-top: 20px;
@@ -290,12 +327,15 @@ article .order svg {
 }
 #cart{
   width: 300px;
-  height: 200px;
+  height: 175px;
   position: absolute;
-  top: 11%;
-  right: 5%;
-  background-color: #eee;
-
+  top: 100px;
+  right: 0%;
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 0px 0px 30px 0px rgb(167, 167, 167);
+  z-index: 5;
+  display: none;
 }
 #cart p{
   padding: 13px 5px;
@@ -315,18 +355,34 @@ article .order svg {
   grid-template-columns: 60px 1fr 30px;
   margin-top: 10px;
 }
-
+#cart .cart-btn{
+  width: 98%;
+  display: block;
+  margin: 20px auto;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--orange);
+  color: white;
+  font-weight: 400;
+  font-size: large;
+  cursor: pointer;
+}
+#cart .cart-btn:hover{
+  background-color: var(--hoverorange);
+  transition: 0.3s;
+}
 #cart #bag .product img{
   width: 50px;
 }
 #cart .grid #bag .product p{
   font-size: 12px;
   letter-spacing: 1px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.8);
   padding: 5px 0px 0px 0px;
 }
 #cart .grid #bag .product span{
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   margin-top: -10px;
 }
@@ -337,9 +393,19 @@ article .order svg {
 }
 #cart .grid #bag .product div svg{
   margin-top: 15px;
-  border: 1px solid black;
 }
-#cart .grid #bag .product svg path #C3CAD9{
-  fill: blcak;
+#cart .grid #bag .product svg  path{
+  fill: grey;
   
+}
+.closecart{
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+  opacity: 0%;
+  display: none;
+  position: absolute;
+  top:0%;
+  left: 0%;
+  z-index: 1;
 }
