@@ -55,9 +55,9 @@ nav ul li {
   padding: 10px;
   cursor: pointer;
   width: 100%;
-  text-align:center;
+  text-align: center;
 }
-nav ul li:hover{
+nav ul li:hover {
   color: var(--orange);
   transition: 0.3s;
 }
@@ -167,7 +167,7 @@ article .order {
   border-radius: 10px;
   cursor: pointer;
 }
-article .order:hover{
+article .order:hover {
   background-color: var(--hoverorange);
   transition: 0.3s;
 }
@@ -195,61 +195,63 @@ article .order svg {
   border: none;
   cursor: pointer;
 }
-.counter button svg path{
+.counter button svg path {
   fill: var(--orange);
 }
-.counter  button:hover>  svg path{
+.counter button:hover > svg path {
   fill: var(--hoverorange);
 }
 #amount {
   line-height: 3;
   font-weight: bold;
 }
-#screen img{
-    transition:0.3s;
+#screen img {
+  transition: 0.3s;
 }
 .gallery div {
-    width: 100%;
-    overflow: hidden;
-
+  width: 100%;
+  overflow: hidden;
 }
 .gallery div img {
-    width: 100%;
-    border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
-.gallery .thumbnails{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-    gap: 20px 20px;
-    margin-top: 20px;
+.gallery .thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 20px 20px;
+  margin-top: 20px;
 }
-.gallery .thumbnails img{
-    border-radius: 10px;
-    cursor: pointer;
-    border: 2px solid transparent;
+.gallery .thumbnails img {
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
-.gallery .thumbnails img:hover{
+.gallery .thumbnails img:hover {
   border-color: var(--orange);
   opacity: 0.8;
 }
-.lightbox{
-    width: 45%;
-    height: auto;
-    opacity: 1;
-    z-index: 4;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+.lightbox {
+  width: 45%;
+  height: auto;
+  opacity: 1;
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
 }
-.lightbox img{
-    width: 100%;
-    border-radius: 5%;
+.lightbox img {
+  width: 100%;
+  border-radius: 5%;
 }
-.previous-scroll img ,.next-scroll img {width: 50%;}
-.lightbox #div{
+.previous-scroll img,
+.next-scroll img {
+  width: 50%;
+}
+.lightbox #div {
   width: 17px;
   float: right;
   padding: 2px;
@@ -265,32 +267,32 @@ article .order svg {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
 }
-.lightbox .thumbnails svg{
+.lightbox .thumbnails svg {
   border-radius: 10%;
   border: 2px solid #999999;
   background-color: white;
 }
-.lightbox .thumbnails img{
+.lightbox .thumbnails img {
   border: 2px solid #999999;
 }
-.lightbox .thumbnails img:hover{
+.lightbox .thumbnails img:hover {
   transition: 0.3s;
   color: white;
-  border-color:var(--orange);
+  border-color: var(--orange);
   background: rgba(255, 255, 255, 0.5);
 }
-.lightbox #div svg path{
+.lightbox #div svg path {
   fill: var(--orange);
 }
 
-.lightbox svg{
-    float: right;
-    margin-bottom: 5px;
-    cursor: pointer;
-    cursor: pointer;
+.lightbox svg {
+  float: right;
+  margin-bottom: 5px;
+  cursor: pointer;
+  cursor: pointer;
 }
 
-.black-filter{
+.black-filter {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -298,11 +300,11 @@ article .order svg {
   top: 0px;
   z-index: 1;
 }
-.relative-box{
+.relative-box {
   position: relative;
   z-index: -1;
 }
-.small-rounded-btn{
+.small-rounded-btn {
   background-color: white;
   width: 50px;
   height: 50px;
@@ -312,20 +314,20 @@ article .order svg {
   cursor: pointer;
   position: absolute;
 }
-.small-rounded-btn img{
+.small-rounded-btn img {
   transform: scale(0.5);
 }
-.previous-scroll{
+.previous-scroll {
   top: 50%;
   right: 100%;
   transform: translateX(50%);
 }
-.next-scroll{
+.next-scroll {
   top: 50%;
   left: 100%;
   transform: translateX(-50%);
 }
-#cart{
+#cart {
   width: 300px;
   height: 175px;
   position: absolute;
@@ -337,25 +339,25 @@ article .order svg {
   z-index: 5;
   display: none;
 }
-#cart p{
+#cart p {
   padding: 13px 5px;
-  font-weight:bold;
+  font-weight: bold;
   letter-spacing: 1.5px;
 }
 
-.nothing{
+.nothing {
   width: 100%;
   text-align: center;
   display: flex;
   margin-top: 40px;
   justify-content: space-around;
 }
-#cart .grid #bag .product{
+#cart .grid #bag .product {
   display: grid;
   grid-template-columns: 60px 1fr 30px;
   margin-top: 10px;
 }
-#cart .cart-btn{
+#cart .cart-btn {
   width: 98%;
   display: block;
   margin: 20px auto;
@@ -369,44 +371,43 @@ article .order svg {
   cursor: pointer;
   display: none;
 }
-#cart .cart-btn:hover{
+#cart .cart-btn:hover {
   background-color: var(--hoverorange);
   transition: 0.3s;
 }
-#cart #bag .product img{
+#cart #bag .product img {
   width: 50px;
 }
-#cart .grid #bag .product p{
+#cart .grid #bag .product p {
   font-size: 12px;
   letter-spacing: 1px;
   color: rgba(0, 0, 0, 0.8);
   padding: 5px 0px 0px 0px;
 }
-#cart .grid #bag .product span{
+#cart .grid #bag .product span {
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   margin-top: -10px;
 }
-#cart .grid #bag .product span strong{
+#cart .grid #bag .product span strong {
   color: black;
   margin-left: 5px;
   font-size: medium;
 }
-#cart .grid #bag .product div svg{
+#cart .grid #bag .product div svg {
   margin-top: 15px;
 }
-#cart .grid #bag .product svg  path{
+#cart .grid #bag .product svg path {
   fill: grey;
-  
 }
-.closecart{
+.closecart {
   width: 100%;
   height: 100%;
   background-color: #efefef;
   opacity: 0%;
   display: none;
   position: absolute;
-  top:0%;
+  top: 0%;
   left: 0%;
   z-index: 1;
 }
