@@ -36,18 +36,21 @@ nav {
   align-items: center;
   width: 170px;
 }
-nav ul {
+.ulcontainer{
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 2;
+}
+nav div ul {
   list-style-type: none;
   grid-area: ul;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-start: 3;
-  grid-column-end: 5;
   column-gap: 10px;
 }
 
-nav ul li {
+nav div ul li {
   display: inline-block;
   font-size: 15px;
   color: black;
@@ -57,7 +60,7 @@ nav ul li {
   width: 100%;
   text-align: center;
 }
-nav ul li:hover {
+nav div ul li:hover {
   color: var(--orange);
   transition: 0.3s;
 }
@@ -415,3 +418,82 @@ article .order svg {
   width: 12px;
   height: 16px;
 }
+
+
+/* Mobile design */
+
+@media only screen and (max-width: 600px) {
+  .container{
+    width: 95%;
+    display: block;
+    margin: auto;
+  }
+  nav{
+    display: block;
+  }
+  nav .ulcontainer{
+    display: none;
+    width: 80%;
+    height: 100vh;
+    position: absolute;
+  }
+  nav .ulcontainer ul{
+    display: block;
+    width: 100%;
+  }
+  nav .ulcontainer ul li{
+    display: block;
+    width: 100%;
+  }
+  section{
+    display: block;
+  }
+  .gallery{
+    width: 100%;
+  }
+  section .gallery .thumbnails{
+    display: none;
+  }
+  article .discount{
+    display: inline;
+    position: absolute;
+    right: 0%;
+  }
+  article .counter{
+    display: block;
+    width: 90%;
+    position:relative;
+    margin: 0px auto;
+    margin-bottom: 30px;
+  }
+  article .counter .left-btn{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 30%;
+    transform: translateX(-50%);
+  }  
+  article .counter .right-btn{
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateX(50%);
+    width: 30%;
+  }
+  .order{
+    width: 90%;
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    margin-right: 6%;
+  }
+}
+
+
+
+
+
+
+
+
+

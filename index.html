@@ -28,13 +28,15 @@
     <div class="container">
       <nav>
         <img class="logo" src="images/logo.svg" alt="" />
-        <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
-        </ul>
+        <div class="ulcontainer">
+          <ul>
+            <li>Collections</li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
         <img
           class="cart-logo"
           onclick="opencart()"
@@ -92,7 +94,7 @@
           <span class="orange-text orange-background">50%</span>
           <p class="discount">$250.00</p>
           <div class="counter">
-            <button onclick="ereasing()">
+            <button class="left-btn" onclick="ereasing()">
               <svg
                 width="12"
                 height="4"
@@ -109,7 +111,7 @@
               </svg>
             </button>
             <div id="amount">0</div>
-            <button onclick="adding()">
+            <button class="right-btn" onclick="adding()">
               <svg
                 width="12"
                 height="12"
