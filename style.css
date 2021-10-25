@@ -411,3 +411,7 @@ article .order svg {
   left: 0%;
   z-index: 1;
 }
+.recyclebin{
+  width: 12px;
+  height: 16px;
+}
