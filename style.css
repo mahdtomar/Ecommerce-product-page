@@ -449,7 +449,7 @@ article .order svg {
     display: block;
   }
   .gallery{
-    width: 100%;
+    display: none;
   }
   section .gallery .thumbnails{
     display: none;
