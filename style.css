@@ -509,7 +509,7 @@ article .order svg {
     transform: translateX(-50%);
   }
   .gallery {position: relative;}
-  .gallery  .right, .gallery .left{
+  .gallery  .rightt, .gallery .leftt{
     display: block;
     position: absolute;
     top: 50%;
@@ -522,10 +522,10 @@ article .order svg {
     height:50px;
     border-radius: 50%;
   }
-  .gallery  .left{
+  .gallery  .leftt{
     left: 2%;
   }
-  .gallery  .right{
+  .gallery  .rightt{
     right: 2%;
   }
   .gallery div img{border-radius: 0px;}
