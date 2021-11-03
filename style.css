@@ -215,6 +215,12 @@ article .order svg {
   width: 100%;
   overflow: hidden;
 }
+.gallery  .right{
+  display: none;
+}
+.gallery  .left{
+  display:none;
+}
 .gallery div img {
   width: 100%;
   border-radius: 20px;
@@ -403,6 +409,9 @@ article .order svg {
 #cart .grid #bag .product svg path {
   fill: grey;
 }
+#cart .grid #bag .product svg {
+  cursor: pointer;
+}
 .closecart {
   width: 100%;
   height: 100%;
@@ -424,12 +433,15 @@ article .order svg {
 
 @media only screen and (max-width: 600px) {
   .container{
-    width: 95%;
+    width: 100%;
     display: block;
     margin: auto;
   }
+  p, h1 , h2, span, .fake-h2 {
+    margin-left: 15px;
+  }
   nav{
-    display: block;
+    margin-top: 0px;
   }
   nav .ulcontainer{
     display: none;
@@ -462,23 +474,23 @@ article .order svg {
   article .counter{
     display: block;
     width: 90%;
-    position:relative;
-    margin: 0px auto;
-    margin-bottom: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   article .counter .left-btn{
     position: absolute;
-    top: 50%;
     left: 10%;
-    width: 30%;
+    width: 10%;
     transform: translateX(-50%);
+    height: 100%;
   }  
   article .counter .right-btn{
     position: absolute;
-    top: 50%;
     right: 10%;
     transform: translateX(50%);
-    width: 30%;
+    height: 100%;
+    width: 10%;
   }
   .order{
     width: 90%;
@@ -486,14 +498,35 @@ article .order svg {
     margin: 0px auto;
     margin-bottom: 30px;
     margin-right: 6%;
+    margin-top: 70px;
   }
+  #cart{
+    width: 90%;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+  }
+  .gallery {position: relative;}
+  .gallery  .right, .gallery .left{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    border-radius: 50%;
+  }
+  .gallery  .left{
+    left: 2%;
+  }
+  .gallery  .right{
+    right: 2%;
+  }
+  .gallery div img{border-radius: 0px;}
 }
-
-
-
-
-
-
-
-
-
