@@ -358,6 +358,7 @@ article .order svg {
   display: flex;
   margin-top: 40px;
   justify-content: space-around;
+  margin-bottom: 40px;
 }
 #cart .grid #bag .product {
   display: grid;
@@ -474,7 +475,8 @@ article .order svg {
   article .discount{
     display: inline;
     position: absolute;
-    right: 0%;
+    right: 20px
+    
   }
   article .counter{
     display: block;
@@ -497,6 +499,7 @@ article .order svg {
     height: 100%;
     width: 10%;
   }
+
   .order{
     width: 90%;
     display: block;
@@ -507,7 +510,7 @@ article .order svg {
   }
   #cart{
     width: 90%;
-    display: block;
+    display: none;
     position: absolute;
     left: 50%;
     top: 100px;
