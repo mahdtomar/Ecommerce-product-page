@@ -1,56 +1,34 @@
-/*
-
-    if (num === 1){
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(1)" src="images/image-product-1.jpg" alt="">`
-    } else if (num === 2) {
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(2)" src="images/image-product-2.jpg" alt="">`
-        
-    } else if (num === 3) {
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(3)" src="images/image-product-3.jpg" alt="">`
-    } else {
-        document.getElementById('screen').innerHTML = `<img id="current"  onclick="lightbox(4)"src="images/image-product-4.jpg" alt="">`
-    }
-
-*/
-/*
-
-    if (num === 1){
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-1.jpg" alt="">`
-    } else if (num === 2) {
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-2.jpg" alt="">`
-        
-    } else if (num === 3) {
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-3.jpg" alt="">`
-    } else {
-        document.getElementById('pic').innerHTML = `<img class="visible" src="images/image-product-4.jpg" alt="">`
-    }
-
-
-*/
 // console.log("hello from main.js");
-var a = document.getElementById("amount");
-// var a = 2
 
-console.log(+a.innerHTML + 1);
+
+if (document.getElementById("screen").style.width > 20) {
+  console.log("True")
+}
+
+
+
+
+// variables
 let gallery = [
-  `<img onclick="lightbox(0)" src="images/image-product-1.jpg" alt="">
-`,
+  `<img onclick="lightbox(0)" src="images/image-product-1.jpg" alt="">`,
   `<img onclick="lightbox(1)" src="images/image-product-2.jpg" alt="">`,
   `<img onclick="lightbox(2)" src="images/image-product-3.jpg" alt="">`,
   `<img onclick="lightbox(3)" src="images/image-product-4.jpg" alt="">`,
 ];
 
 let scroll = [
-  `<img onclick="next(0)" src="images/image-product-1.jpg" alt="">
-`,
+  `<img onclick="next(0)" src="images/image-product-1.jpg" alt="">`,
   `<img onclick="next(1)" src="images/image-product-2.jpg" alt="">`,
   `<img onclick="next(2)" src="images/image-product-3.jpg" alt="">`,
   `<img onclick="next(3)" src="images/image-product-4.jpg" alt="">`,
 ];
 
+var a = document.getElementById("amount");
 var bag = document.getElementById("bag");
 var Bscreen = document.getElementById("blackscreen");
 
+
+// functions
 function tothumb(num) {
   document.getElementById("screen").innerHTML = gallery[num];
 }
@@ -58,9 +36,7 @@ function tothumb(num) {
 function lightbox(num) {
   document.getElementById("pic").innerHTML = gallery[num];
   document.getElementById("lightbox").classList.add("visible");
-  document.getElementById(
-    "blackscreen"
-  ).innerHTML = `<div onclick="close()" class="black-filter"></div>`;
+  document.getElementById("blackscreen").innerHTML = `<div onclick="close()" class="black-filter"></div>`;
   document.getElementById("lightbox").style.display = "block";
   document.getElementById("body").style.zIndex = "-1";
 }
@@ -121,8 +97,6 @@ function cartitems() {
   }
 }
 
-cartitems();
-
 function addtocart() {
   if (a.innerHTML == 0) {
     bag.innerHTML = `<p class="nothing">Your cart is empty.</p>`;
@@ -149,12 +123,6 @@ function addtocart() {
 }
 
 function opencart() {
-  // if (document.getElementById("cart").style.display == "block"){
-  //     document.getElementById("cart").style.display = "none"
-  // }else{
-  //     document.getElementById("cart").style.display = "block"
-  //     document.getElementById("closecart").classList.add = "tapAW"
-  // }
   document.getElementById("cart").style.display = "block";
   document.getElementById("closecart").style.display = "block";
 }
@@ -170,3 +138,5 @@ function RemoveProduct() {
   bag.innerHTML = "nothing";
   cartitems();
 }
+
+cartitems();

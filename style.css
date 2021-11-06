@@ -536,6 +536,9 @@ article .order svg {
   .gallery  .rightt{
     right: 2%;
   }
+  #screen .rightt,#screen .leftt{
+    display: none;
+  }
   .gallery div img{border-radius: 0px;}
   #cart{
     height: auto;
@@ -560,5 +563,9 @@ article .order svg {
     display: none;
     max-width: 85%;
     margin-bottom: 30px;
+  }
+  .lightbox {
+    width: 80%;
+    height: auto;
   }
 }
