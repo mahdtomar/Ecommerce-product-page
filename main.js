@@ -39,6 +39,7 @@ function lightbox(num) {
   document.getElementById("blackscreen").innerHTML = `<div onclick="close()" class="black-filter"></div>`;
   document.getElementById("lightbox").style.display = "block";
   document.getElementById("body").style.zIndex = "-1";
+  document.getElementById("body").style.overflow = "hidden"
 }
 
 function heavybox() {
