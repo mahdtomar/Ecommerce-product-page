@@ -34,6 +34,7 @@ nav {
   grid-column-end: 2;
   align-items: center;
   width: 170px;
+  
 }
 .ulcontainer{
   grid-column-start: 3;
@@ -528,10 +529,18 @@ article {
     display: block;
     width: 100%;
   }
+  .logo{
+    flex-grow: 2;
+    max-width: 265px;
+  }
   .cart-logo {
     cursor: pointer;
     padding: 8px;
     margin-right: 0px;
+    flex-grow: 1;
+  }
+  #red-circle{
+    right: 0px;
   }
   section{
     display: block;
