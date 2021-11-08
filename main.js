@@ -44,7 +44,6 @@ function lightbox(num) {
 function heavybox() {
   document.getElementById("blackscreen").innerHTML = ``;
   document.getElementById("lightbox").style.display = "none";
-
 }
 
 function next() {
@@ -121,6 +120,7 @@ function addtocart() {
         </div>`;
     document.getElementById("cart-btn").style.display = "block";
   }
+  cartalert();
 }
 
 function opencart() {
@@ -140,4 +140,14 @@ function RemoveProduct() {
   cartitems();
 }
 
+function cartalert() {
+  if(bag.innerHTML == `nothing` | bag.innerHTML == `<p class="nothing">Your cart is empty.</p>` ){
+    console.log("the cart is empty")
+    document.getElementById("red-circle").style.display = "none";
+  } else{
+    document.getElementById("red-circle").style.display = "block";
+  }
+}
+
+cartalert();
 cartitems();
