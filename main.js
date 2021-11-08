@@ -45,6 +45,8 @@ function lightbox(num) {
 function heavybox() {
   document.getElementById("blackscreen").innerHTML = ``;
   document.getElementById("lightbox").style.display = "none";
+  document.getElementById("body").style.overflow = "visible"
+
 }
 
 function next() {

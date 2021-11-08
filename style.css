@@ -208,7 +208,9 @@ article .order svg {
   line-height: 3;
   font-weight: bold;
 }
-
+.gallery{
+  min-width: 300px;
+}
 .gallery div {
   width: 100%;
   overflow: hidden;
@@ -238,6 +240,9 @@ article .order svg {
 .gallery .thumbnails img:hover {
   border-color: var(--orange);
   opacity: 0.8;
+}
+article {
+  min-width: 305px;
 }
 .lightbox {
   width: 45%;
@@ -434,36 +439,61 @@ article .order svg {
   height: 16px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+*
+*
+*
+*
+*
+*
+*
+*/
 
 /* Mobile design */
 
+@media only screen and (max-width: 900px) {
+  section{
+    column-gap: 30px;
+  }
+  nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  nav div ul {
+    column-gap: 0px;
+    margin: 0px 10px;
+  }
+}
+
+/*
+*
+*
+*
+*
+*
+*
+*
+*/
 
 
+@media only screen and (max-width: 720px) {
+  article .order{
+    padding:15px 50px ;
+    float: left;
+    margin-left: 10px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+*
+*
+*
+*
+*
+*
+*
+*/
 
 @media only screen and (max-width: 600px) {
   .container{
@@ -474,7 +504,14 @@ article .order svg {
   p, h1 , h2, span, .fake-h2 {
     margin-left: 15px;
   }
-  nav{
+  nav {
+    height: 100px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin: 0px 10px;
   }
   nav .ulcontainer{
@@ -527,7 +564,6 @@ article .order svg {
     height: 100%;
     width: 10%;
   }
-
   .order{
     width: 90%;
     display: block;
@@ -597,3 +633,7 @@ article .order svg {
     height: auto;
   }
 }
+
+
+
+
