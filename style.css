@@ -619,8 +619,7 @@ article {
     display: none;
   }
   .gallery div img{border-radius: 0px;}
-  #cart{
-  }
+  
   #cart .grid #bag .product {
     display: grid;
     grid-template-columns: 60px 1fr 30px;
