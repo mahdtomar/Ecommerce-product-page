@@ -138,6 +138,7 @@ function RemoveProduct() {
   document.getElementById("cart-btn").style.display = "none";
   bag.innerHTML = "nothing";
   cartitems();
+  cartalert();
 }
 
 function cartalert() {
