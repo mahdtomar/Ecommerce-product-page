@@ -134,11 +134,7 @@ function closecart() {
 }
 
 function RemoveProduct() {
-  console.log("removeproduct is working");
-  document.getElementById("cart-btn").style.display = "none";
-  bag.innerHTML = "nothing";
-  cartitems();
-  cartalert();
+
 }
 
 function cartalert() {
