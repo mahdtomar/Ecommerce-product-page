@@ -1,5 +1,3 @@
-// console.log("hello from main.js");
-
 
 if (document.getElementById("screen").style.width > 20) {
   console.log("True")
