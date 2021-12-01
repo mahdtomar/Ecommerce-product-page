@@ -423,13 +423,79 @@ article .order svg {
 /* Mobile design */
 
 @media only screen and (max-width: 600px) {
+  body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+  }
+  .lightbox{
+    grid-row-start: 1;
+    display: block;
+    position: static;
+    width: 90%;
+    margin: 90px auto;
+    transform: none;
+  }
+  
+  .lightbox img {
+    width: 100%;
+    border-radius: 5%;
+  }
+  .previous-scroll img,
+  .next-scroll img {
+    width: 50%;
+  }
+  .lightbox #div {
+    display: none;
+  }
+  .lightbox .thumbnails {
+    display: none;
+  }
+
+
+  .lightbox svg {
+    float: right;
+    margin-bottom: 5px;
+    cursor: pointer;
+    cursor: pointer;
+  }
+  .small-rounded-btn img {
+    transform: scale(0.5);
+  }
+  .previous-scroll {
+    top: 45%;
+    right: 90%;
+    /* transform: translateX(50%); */
+  }
+  .next-scroll {
+    top: 45%;
+    left: 90%;
+    /* transform: translateX(-50%); */
+  }
+  .small-rounded-btn {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+}
+  .small-rounded-btn img {
+    transform: scale(0.5);
+  }
   .container{
     width: 95%;
     display: block;
     margin: auto;
+    position: static;
   }
   nav{
     display: block;
+    position: absolute;
+    top: 0%;
   }
   nav .ulcontainer{
     display: none;
