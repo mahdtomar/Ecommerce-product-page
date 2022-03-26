@@ -1,35 +1,5 @@
-/*
 
-    if (num === 1){
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(1)" src="images/image-product-1.jpg" alt="">`
-    } else if (num === 2) {
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(2)" src="images/image-product-2.jpg" alt="">`
-        
-    } else if (num === 3) {
-        document.getElementById('screen').innerHTML = `<img id="current" onclick="lightbox(3)" src="images/image-product-3.jpg" alt="">`
-    } else {
-        document.getElementById('screen').innerHTML = `<img id="current"  onclick="lightbox(4)"src="images/image-product-4.jpg" alt="">`
-    }
-
-*/
-/*
-
-    if (num === 1){
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-1.jpg" alt="">`
-    } else if (num === 2) {
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-2.jpg" alt="">`
-        
-    } else if (num === 3) {
-        document.getElementById('pic').innerHTML = `<img id="current" src="images/image-product-3.jpg" alt="">`
-    } else {
-        document.getElementById('pic').innerHTML = `<img class="visible" src="images/image-product-4.jpg" alt="">`
-    }
-
-
-*/
-// console.log("hello from main.js");
-var a = document.getElementById("amount");
-// var a = 2
+let a = document.getElementById("amount");
 
 console.log(+a.innerHTML + 1);
 let gallery = [
@@ -48,7 +18,7 @@ let scroll = [
   `<img onclick="next(3)" src="images/image-product-4.jpg" alt="">`,
 ];
 
-var Bscreen = document.getElementById("blackscreen");
+let Bscreen = document.getElementById("blackscreen");
 function tothumb(num) {
   document.getElementById("screen").innerHTML = gallery[num];
 }
@@ -60,17 +30,19 @@ function lightbox(num) {
   ).innerHTML = `<div onclick="close()" class="black-filter"></div>`;
   document.getElementById("lightbox").style.display = "block";
   document.getElementById("body").style.zIndex = "-1";
+  document.body.style.overflow = "hidden";
 }
 function heavybox() {
   document.getElementById("blackscreen").innerHTML = ``;
   document.getElementById("lightbox").style.display = "none";
+  document.body.style.overflow = "scroll";
 }
 function next() {
   let current = document.getElementById("pic");
   for (i = 0; i < gallery.length; i++) {
     if (current.innerHTML == gallery[i]) {
       console.log(i);
-      var next = i + 1;
+      let next = i + 1;
       if (next === gallery.length) {
         document.getElementById("pic").innerHTML = gallery[0];
       } else {
@@ -85,7 +57,7 @@ function pre() {
   for (i = 0; i < gallery.length; i++) {
     if (current.innerHTML == gallery[i]) {
       console.log(i);
-      var pre = i - 1;
+      let pre = i - 1;
       if (pre === -1) {
         document.getElementById("pic").innerHTML = gallery[gallery.length - 1];
         break;
@@ -105,7 +77,7 @@ function ereasing() {
     a.innerHTML = 0;
   }
 }
-var bag = document.getElementById("bag");
+let bag = document.getElementById("bag");
 function cartitems() {
   if (bag.innerHTML === "nothing" || a == 0) {
     bag.innerHTML = `<p class="nothing">Your cart is empty.</p>`;
@@ -119,7 +91,7 @@ function addtocart() {
     bag.innerHTML = `<p class="nothing">Your cart is empty.</p>`;
     document.getElementById("cart-btn").style.display = "none";
   } else {
-    var currentimg = document.getElementById("screen");
+    let currentimg = document.getElementById("screen");
     bag.innerHTML = `<div class="product">
         ${currentimg.innerHTML}
         <div>
@@ -134,12 +106,6 @@ function addtocart() {
 }
 
 function opencart() {
-  // if (document.getElementById("cart").style.display == "block"){
-  //     document.getElementById("cart").style.display = "none"
-  // }else{
-  //     document.getElementById("cart").style.display = "block"
-  //     document.getElementById("closecart").classList.add = "tapAW"
-  // }
   document.getElementById("cart").style.display = "block";
   document.getElementById("closecart").style.display = "block";
 }
