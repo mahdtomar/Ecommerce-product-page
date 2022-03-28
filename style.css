@@ -433,14 +433,16 @@ article .order svg {
     grid-row-start: 1;
     display: block;
     position: static;
-    width: 90%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 0px;
     margin: 90px auto;
     transform: none;
   }
   
   .lightbox img {
     width: 100%;
-    border-radius: 5%;
+    border-radius: 0px;
   }
   .previous-scroll img,
   .next-scroll img {
@@ -456,7 +458,7 @@ article .order svg {
 
   .lightbox svg {
     float: right;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     cursor: pointer;
     cursor: pointer;
   }
