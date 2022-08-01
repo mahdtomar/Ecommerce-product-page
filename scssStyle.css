@@ -1,0 +1,89 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+body .container nav {
+  margin-top: 10px;
+  padding: 0px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container nav ul {
+  list-style-type: none;
+  width: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container nav ul li {
+  margin: 0px 10px;
+  display: inline;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+body .container nav ul li::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: transparent;
+  -webkit-transition: width 0.3s linear;
+  transition: width 0.3s linear;
+  -webkit-transition: background 0.3s linear;
+  transition: background 0.3s linear;
+}
+
+body .container nav ul li:hover::before {
+  background-color: #ff7d1a;
+}
+
+body .container nav div {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container nav div img {
+  width: 50px;
+}
+
+body .container nav div img.cart-logo {
+  width: 30px;
+}
+/*# sourceMappingURL=scssStyle.css.map */

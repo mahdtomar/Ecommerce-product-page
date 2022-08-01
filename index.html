@@ -13,7 +13,7 @@
   favicon-32x32.png"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="scssStyle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,8 +27,8 @@
   <body id="body">
     <div class="container">
       <nav>
-        <img class="logo" src="images/logo.svg" alt="" />
         <div class="ulcontainer">
+        <img class="logo" src="images/logo.svg" alt="" />
           <ul>
             <li>Collections</li>
             <li>Men</li>
@@ -37,13 +37,15 @@
             <li>Contact</li>
           </ul>
         </div>
-        <img
-          class="cart-logo"
-          onclick="opencart()"
-          src="images/icon-cart.svg"
-          alt=""
-        />
-        <img class="avatar" src="images/image-avatar.png" alt="" />
+        <div>
+          <img
+            class="cart-logo"
+            onclick="opencart()"
+            src="images/icon-cart.svg"
+            alt=""
+          />
+          <img class="avatar" src="images/image-avatar.png" alt="" />
+        </div>
       </nav>
       <hr />
       <section>
@@ -223,6 +225,6 @@
     </div>
     <div class="blackscreen" id="blackscreen"></div>
     <div class="closecart" onclick="closecart()" id="closecart"></div>
-        <script src="main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
