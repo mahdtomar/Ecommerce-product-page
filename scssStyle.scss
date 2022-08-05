@@ -69,6 +69,7 @@ body {
       }
     }
     section {
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -124,6 +125,42 @@ body {
         }
         p{
           display: block;
+        }
+        .discount-offer{
+          margin: 20px 0px 0px;
+          font-size: 1.5em;
+          width: 170px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .orange-background{
+            background-color: rgba($color: #e9be13, $alpha: 0.3);
+            padding: 5px;
+            border-radius: 8px;
+          }
+        }
+        .discount{
+          display: block;
+          font-size: 1em;
+          text-decoration: line-through;
+          opacity: 0.8;
+        }
+        .cashier{
+          margin-top: 20px;
+          background-color: red;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .counter{
+            background-color: #e9be13;
+            width: 100px;
+            height: 65px;
+            border-radius:15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+          }
         }
       }
     }

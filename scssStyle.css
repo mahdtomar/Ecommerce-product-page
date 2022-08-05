@@ -109,6 +109,7 @@ body .container nav div img.cart-logo {
 }
 
 body .container section {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,6 +186,63 @@ body .container section article span.bold {
 
 body .container section article p {
   display: block;
+}
+
+body .container section article .discount-offer {
+  margin: 20px 0px 0px;
+  font-size: 1.5em;
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container section article .discount-offer .orange-background {
+  background-color: rgba(233, 190, 19, 0.3);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+body .container section article .discount {
+  display: block;
+  font-size: 1em;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+body .container section article .cashier {
+  margin-top: 20px;
+  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container section article .cashier .counter {
+  background-color: #e9be13;
+  width: 100px;
+  height: 65px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #cart {
