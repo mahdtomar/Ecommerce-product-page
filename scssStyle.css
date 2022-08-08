@@ -3,7 +3,7 @@
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
 body .container {
@@ -218,7 +218,6 @@ body .container section article .discount {
 
 body .container section article .cashier {
   margin-top: 20px;
-  background-color: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,8 +230,8 @@ body .container section article .cashier {
 }
 
 body .container section article .cashier .counter {
-  background-color: #e9be13;
-  width: 100px;
+  background-color: #f3f3f3;
+  width: 30%;
   height: 65px;
   border-radius: 15px;
   display: -webkit-box;
@@ -243,6 +242,57 @@ body .container section article .cashier .counter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body .container section article .cashier .counter button {
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+body .container section article .cashier .counter button:hover {
+  cursor: pointer;
+}
+
+body .container section article .cashier .order {
+  width: 60%;
+  height: 65px;
+  border: none;
+  background-color: #ff7d1a;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+}
+
+body .container section article .cashier .order:hover {
+  background-color: #ffede0;
+}
+
+body .container section article .cashier .order svg {
+  margin-right: 20px;
+}
+
+body .container section article .cashier .order svg path {
+  fill: white;
 }
 
 #cart {

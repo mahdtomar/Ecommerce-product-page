@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 body {
   .container {
@@ -106,60 +106,91 @@ body {
       }
 
       article {
-        span{
+        span {
           display: block;
           text-transform: uppercase;
-          &.orange-text{
+          &.orange-text {
             color: hsl(26, 100%, 55%);
             letter-spacing: 2px;
           }
-          &.fake-h2{
-            font-weight:bold ;
+          &.fake-h2 {
+            font-weight: bold;
             margin: 20px 0px 40px;
             font-size: 2.5em;
           }
-          &.bold{
+          &.bold {
             font-weight: bold;
             display: inline;
-          }  
+          }
         }
-        p{
+        p {
           display: block;
         }
-        .discount-offer{
+        .discount-offer {
           margin: 20px 0px 0px;
           font-size: 1.5em;
           width: 170px;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          .orange-background{
+          .orange-background {
             background-color: rgba($color: #e9be13, $alpha: 0.3);
             padding: 5px;
             border-radius: 8px;
           }
         }
-        .discount{
+        .discount {
           display: block;
           font-size: 1em;
           text-decoration: line-through;
           opacity: 0.8;
         }
-        .cashier{
+        .cashier {
           margin-top: 20px;
-          background-color: red;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          .counter{
-            background-color: #e9be13;
-            width: 100px;
+          .counter {
+            background-color: rgb(243, 243, 243);
+            width: 30%;
             height: 65px;
-            border-radius:15px;
+            border-radius: 15px;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            
+            button {
+              border: none;
+              background-color: transparent;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 20px;
+              height: 20px;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+          }
+          .order {
+            width: 60%;
+            height: 65px;
+            border: none;
+            background-color: hsl(26, 100%, 55%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-size: 1.3em;
+            align-items: center;
+            border-radius: 10px;
+            &:hover{
+            background-color: hsl(25, 100%, 94%);
+            }
+            svg {
+              margin-right: 20px;
+              path{
+                fill: white;
+              }
+            }
           }
         }
       }
