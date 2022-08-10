@@ -2,10 +2,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  // border: 1px solid black;
   font-family: "Kumbh Sans", sans-serif;
 }
 body {
+  position: relative;
   .container {
+    width: 95%;
     max-width: 1440px;
     margin: auto;
     nav {
@@ -196,11 +199,19 @@ body {
       }
     }
   }
+  overflow: hidden;
+  .lightbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 80%;
+    img{
+      max-width: 300px;
+    }
+  }
 }
 
 #cart {
-  display: none;
-}
-.lightbox {
   display: none;
 }

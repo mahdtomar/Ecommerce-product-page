@@ -6,7 +6,13 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+body {
+  position: relative;
+  overflow: hidden;
+}
+
 body .container {
+  width: 95%;
   max-width: 1440px;
   margin: auto;
 }
@@ -295,11 +301,20 @@ body .container section article .cashier .order svg path {
   fill: white;
 }
 
-#cart {
-  display: none;
+body .lightbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 80%;
 }
 
-.lightbox {
+body .lightbox img {
+  max-width: 300px;
+}
+
+#cart {
   display: none;
 }
 /*# sourceMappingURL=scssStyle.css.map */
