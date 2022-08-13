@@ -8,6 +8,7 @@
 
 body {
   position: relative;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -19,7 +20,6 @@ body .container {
 
 body .container nav {
   width: 100%;
-  margin-top: 10px;
   padding: 0px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,7 +137,6 @@ body .container section .gallery {
 
 body .container section .gallery #screen {
   overflow: hidden;
-  border-radius: 20px;
   margin: auto;
   display: block;
   width: 70%;
@@ -145,6 +144,7 @@ body .container section .gallery #screen {
 }
 
 body .container section .gallery #screen img {
+  border-radius: 20px;
   height: auto;
   width: 100%;
 }
@@ -305,9 +305,21 @@ body .lightbox {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 80%;
+  -webkit-transform: translate(-50%, -52%);
+          transform: translate(-50%, -52%);
+  height: 95%;
+  display: none;
+  z-index: 100;
+  max-width: 555px;
+}
+
+body .lightbox #div {
+  width: 20px;
+  position: relative;
+  left: 95%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 10px;
 }
 
 body .lightbox img {
@@ -318,9 +330,9 @@ body .lightbox .relative-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -340,6 +352,15 @@ body .lightbox .relative-box .small-rounded-btn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+}
+
+body .lightbox .relative-box .small-rounded-btn.previous-scroll {
+  left: 0px;
+}
+
+body .lightbox .relative-box .small-rounded-btn.next-scroll {
+  right: 0px;
 }
 
 body .lightbox .relative-box .pic {
@@ -376,13 +397,17 @@ body .lightbox .thumbnails img {
   display: none;
 }
 
-.blackscreen.active {
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.2;
-  position: absolute;
+.blackscreen {
   top: 0px;
   left: 0px;
+}
+
+.black-filter {
+  background: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.3;
+  top: 0px;
 }
 /*# sourceMappingURL=scssStyle.css.map */
