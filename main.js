@@ -121,29 +121,53 @@ const cartBody = document.getElementById("cart");
 const closecart = document.getElementById("closecart");
 const currentProductImage = document.querySelector(".productImage");
 const thumbs = document.querySelectorAll(".thumb");
+const screen = document.getElementById("screen");
 
-let imageNumber = currentProductImage.getAttribute("src");
+let imageNumber = screen.children[0].getAttribute("src");
 
 thumbs.forEach((image) => {
   image.addEventListener("click", () => {
-    console.log(image.id)
+    console.log(image.id);
+    let source = imageNumber.split("");
     switch (image.id) {
       case "thumb1 ":
-        imageNumber.indexOf(21) = 1
-        console.log(imageNumber)
-        currentProductImage.getAttribute("src") = imageNumber;
+        console.log(source)
+        source[21] = 1
+        source.join("")
+        console.log(source)
+        document
+          .querySelector(".productImage")
+          .setAttribute("src", source);
+
         break;
       case "thumb2 ":
-        imageNumber.indexOf(21) = 2
-        currentProductImage.getAttribute("src").indexOf("1") = 2;
+        console.log(source)
+        source[21] = "2"
+        source.join("")
+        
+        console.log(source)
+
+        document
+          .querySelector(".productImage")
+          .setAttribute("src", source);
         break;
-        case "thumb3 ":
-          imageNumber.indexOf(21) = 3
-        currentProductImage.getAttribute("src")= 3;
+      case "thumb3 ":
+        console.log(source)
+        source[21] = 3
+        console.log(source)
+        document
+          .querySelector(".productImage")
+          .setAttribute("src", source);
+
         break;
-        case "thumb4 ":
-          imageNumber.indexOf(21) = 4
-        currentProductImage.getAttribute("src").indexOf("1") = 4;
+      case "thumb4 ":
+        console.log(source)
+        source[21] = 4
+        console.log(source)
+        document
+          .querySelector(".productImage")
+          .setAttribute("src", source);
+
         break;
       default:
         break;
