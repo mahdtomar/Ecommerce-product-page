@@ -16,6 +16,7 @@ body .container {
   width: 95%;
   max-width: 1440px;
   margin: auto;
+  position: relative;
 }
 
 body .container nav {
@@ -112,6 +113,7 @@ body .container nav div img {
 
 body .container nav div img.cart-logo {
   width: 30px;
+  cursor: pointer;
 }
 
 body .container section {
@@ -301,6 +303,14 @@ body .container section article .cashier .order svg path {
   fill: white;
 }
 
+body .container .attribution {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 body .lightbox {
   position: absolute;
   top: 50%;
@@ -394,14 +404,17 @@ body .lightbox .thumbnails img {
 }
 
 body #cart {
-  background-color: #eee;
+  background-color: whitesmoke;
   position: absolute;
   width: 300px;
-  top: 0px;
-  right: 45%;
+  top: 80px;
+  right: 0%;
   padding: 8px;
   border-radius: 12px;
   height: 160px;
+  border: 1px solid black;
+  display: none;
+  z-index: 10;
 }
 
 body #cart #cart-btn {
@@ -416,6 +429,11 @@ body #cart #cart-btn {
   border-radius: 8px;
   border: none;
   background-color: #ff7d1a;
+}
+
+body #cart .grid #bag .nothing {
+  text-align: center;
+  margin-top: 20px;
 }
 
 body #cart .grid #bag .product {
@@ -452,5 +470,15 @@ body #cart .grid #bag .product .recyclebin {
   position: absolute;
   opacity: 0.3;
   top: 0px;
+}
+
+.closecart {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0px;
+  z-index: 9;
 }
 /*# sourceMappingURL=scssStyle.css.map */

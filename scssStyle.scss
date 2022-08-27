@@ -13,6 +13,7 @@ body {
     width: 95%;
     max-width: 1440px;
     margin: auto;
+    position: relative;
     nav {
       width: 100%;
       padding: 0px 10px;
@@ -68,6 +69,7 @@ body {
           width: 50px;
           &.cart-logo {
             width: 30px;
+            cursor: pointer;
           }
         }
       }
@@ -199,6 +201,12 @@ body {
         }
       }
     }
+    .attribution {
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+    }
   }
   .lightbox {
     position: absolute;
@@ -260,15 +268,18 @@ body {
     }
   }
   #cart {
-    background-color: #eee;
+    background-color: hsl(0, 0%, 96%);
     position: absolute;
     width: 300px;
-    top: 0px;
-    right: 45%;    
+    top: 80px;
+    right: 0%;
     padding: 8px;
     border-radius: 12px;
     height: 160px;
-    #cart-btn{
+    border: 1px solid black;
+    display: none;
+    z-index: 10;
+    #cart-btn {
       width: 97%;
       display: block;
       position: absolute;
@@ -280,18 +291,22 @@ body {
       border: none;
       background-color: #ff7d1a;
     }
-    .grid{
-      #bag{
-        .product{
+    .grid {
+      #bag {
+        .nothing {
+          text-align: center;
+          margin-top: 20px;
+        }
+        .product {
           background-color: yellow;
           display: flex;
           justify-content: space-between;
           align-items: center;
-          img{
+          img {
             width: 90px;
             height: 90%;
           }
-          .recyclebin{
+          .recyclebin {
             width: 20px;
           }
         }
@@ -311,4 +326,13 @@ body {
   position: absolute;
   opacity: 0.3;
   top: 0px;
+}
+.closecart {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba($color: #000000, $alpha: 0);
+  position: absolute;
+  top: 0px;
+  z-index: 9;
 }
