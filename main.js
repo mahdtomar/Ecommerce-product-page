@@ -131,43 +131,28 @@ thumbs.forEach((image) => {
     let source = imageNumber.split("");
     switch (image.id) {
       case "thumb1 ":
-        console.log(source)
-        source[21] = 1
-        source.join("")
-        console.log(source)
+        source[21] = 1;
         document
           .querySelector(".productImage")
-          .setAttribute("src", source);
-
+          .setAttribute("src", source.join(""));
         break;
       case "thumb2 ":
-        console.log(source)
-        source[21] = "2"
-        source.join("")
-        
-        console.log(source)
-
+        source[21] = "2";
         document
           .querySelector(".productImage")
-          .setAttribute("src", source);
+          .setAttribute("src", source.join(""));
         break;
       case "thumb3 ":
-        console.log(source)
-        source[21] = 3
-        console.log(source)
+        source[21] = 3;
         document
           .querySelector(".productImage")
-          .setAttribute("src", source);
-
+          .setAttribute("src", source.join(""));
         break;
       case "thumb4 ":
-        console.log(source)
-        source[21] = 4
-        console.log(source)
+        source[21] = 4;
         document
           .querySelector(".productImage")
-          .setAttribute("src", source);
-
+          .setAttribute("src", source.join(""));
         break;
       default:
         break;
