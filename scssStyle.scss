@@ -86,31 +86,41 @@ body {
         display: block;
         max-height: 750px;
         position: relative;
-        #screen {
-          overflow: hidden;
+        // background-color: #e9be13;
+        .gallery-container {
+          // background-color: violet;
+          height: 100%;
+          width: 90%;
           margin: auto;
-          display: block;
-          width: 75%;
-          height: 80;
-          display: flex;
-          justify-content: flex-end;
-          img {
-            border-radius: 20px;
-            height: auto;
-            max-width: 100%;
-            max-height: 97%;
+          #screen {
+            // background-color: blue;
+            overflow: hidden;
+            margin: auto;
+            display: block;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            img {
+              border-radius: 20px;
+              height: auto;
+              max-width: 100%;
+              max-height: 97%;
+            }
           }
-        }
-        .thumbnails {
-          height: 20%;
-          width: 70%;
-          margin: auto;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          img {
-            height: 100px;
-            border-radius: 10px;
+          .thumbnails {
+            // background-color: red;
+            height: 20%;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            img {
+              padding: 5px;
+              height: 100px;
+              border-radius: 10px;
+            }
           }
         }
       }
@@ -204,12 +214,6 @@ body {
           }
         }
       }
-    }
-    .attribution {
-      position: absolute;
-      left: 50%;
-      bottom: -10px;
-      transform: translateX(-50%);
     }
   }
   .lightbox {
@@ -306,9 +310,9 @@ body {
           justify-content: space-between;
           align-items: center;
           img {
-            width:80px;
+            width: 80px;
             height: 70%;
-            &.trashicon{
+            &.trashicon {
               height: 30px;
               width: 25px;
             }
@@ -319,6 +323,12 @@ body {
         }
       }
     }
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

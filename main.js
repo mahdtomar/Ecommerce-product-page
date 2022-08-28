@@ -127,28 +127,10 @@ const cart = document.getElementById("bag");
 let divSample = document.createElement("div");
 let imgSample = document.createElement("img");
 let pSample = document.createElement("p");
-const trashIcon = document.createElement("img")
-trashIcon.setAttribute("src",`./images/icon-delete.svg`)
-trashIcon.classList.add("trashicon")
+const trashIcon = document.createElement("img");
+trashIcon.setAttribute("src", `./images/icon-delete.svg`);
+trashIcon.classList.add("trashicon");
 orderBtn.addEventListener("click", addToCart);
-
-function addToCart() {
-  cart.innerHTML = "";
-  let parentDiv = divSample.cloneNode();
-  let priceDiv = divSample.cloneNode();
-  let currentProductImage = imgSample.cloneNode();
-  let pricecontainer = pSample.cloneNode();
-  pricecontainer.innerHTML = `125$ x ${productsAmount.innerHTML}
-  <p>${productsAmount.innerHTML * 125}</p>
-`;
-priceDiv.appendChild(pricecontainer)
-  currentProductImage.setAttribute("src", imageSource);
-  parentDiv.appendChild(currentProductImage);
-  parentDiv.appendChild(priceDiv);
-  parentDiv.classList.add("product");
-  parentDiv.appendChild(trashIcon)
-  cart.appendChild(parentDiv);
-}
 
 let imageSource = screen.children[0].getAttribute("src");
 
@@ -202,6 +184,7 @@ plus.addEventListener("click", () => {
   number++;
   productsAmount.innerHTML = number;
 });
+
 minus.addEventListener("click", () => {
   if (productsAmount.innerHTML === "0") {
   } else {
@@ -210,3 +193,26 @@ minus.addEventListener("click", () => {
     productsAmount.innerHTML = number;
   }
 });
+
+function addToCart() {
+  if (productsAmount.innerHTML == "0") {
+    cart.innerHTML = "";
+  } else {
+    // empty the cart & clone html elements to add into the cart
+    cart.innerHTML = "";
+    let parentDiv = divSample.cloneNode();
+    let priceDiv = divSample.cloneNode();
+    let currentProductImage = imgSample.cloneNode();
+    let pricecontainer = pSample.cloneNode();
+    pricecontainer.innerHTML = `125$ x ${productsAmount.innerHTML}
+    <p>${productsAmount.innerHTML * 125}</p>`; // calculating the price
+
+    priceDiv.appendChild(pricecontainer);
+    currentProductImage.setAttribute("src", imageSource);
+    parentDiv.appendChild(currentProductImage);
+    parentDiv.appendChild(priceDiv);
+    parentDiv.classList.add("product");
+    parentDiv.appendChild(trashIcon);
+    cart.appendChild(parentDiv);
+  }
+}
