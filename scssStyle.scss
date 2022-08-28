@@ -85,16 +85,20 @@ body {
         height: 80vh;
         display: block;
         max-height: 750px;
+        position: relative;
         #screen {
           overflow: hidden;
           margin: auto;
           display: block;
-          width: 70%;
-          height: 80%;
+          width: 75%;
+          height: 80;
+          display: flex;
+          justify-content: flex-end;
           img {
             border-radius: 20px;
             height: auto;
-            width: 100%;
+            max-width: 100%;
+            max-height: 97%;
           }
         }
         .thumbnails {
@@ -298,13 +302,16 @@ body {
           margin-top: 20px;
         }
         .product {
-          background-color: yellow;
           display: flex;
           justify-content: space-between;
           align-items: center;
           img {
-            width: 90px;
-            height: 90%;
+            width:80px;
+            height: 70%;
+            &.trashicon{
+              height: 30px;
+              width: 25px;
+            }
           }
           .recyclebin {
             width: 20px;

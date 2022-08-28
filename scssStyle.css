@@ -135,20 +135,28 @@ body .container section .gallery {
   height: 80vh;
   display: block;
   max-height: 750px;
+  position: relative;
 }
 
 body .container section .gallery #screen {
   overflow: hidden;
   margin: auto;
   display: block;
-  width: 70%;
-  height: 80%;
+  width: 75%;
+  height: 80;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body .container section .gallery #screen img {
   border-radius: 20px;
   height: auto;
-  width: 100%;
+  max-width: 100%;
+  max-height: 97%;
 }
 
 body .container section .gallery .thumbnails {
@@ -437,7 +445,6 @@ body #cart .grid #bag .nothing {
 }
 
 body #cart .grid #bag .product {
-  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,8 +457,13 @@ body #cart .grid #bag .product {
 }
 
 body #cart .grid #bag .product img {
-  width: 90px;
-  height: 90%;
+  width: 80px;
+  height: 70%;
+}
+
+body #cart .grid #bag .product img.trashicon {
+  height: 30px;
+  width: 25px;
 }
 
 body #cart .grid #bag .product .recyclebin {

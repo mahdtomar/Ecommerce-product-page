@@ -122,13 +122,40 @@ const closecart = document.getElementById("closecart");
 const currentProductImage = document.querySelector(".productImage");
 const thumbs = document.querySelectorAll(".thumb");
 const screen = document.getElementById("screen");
+const orderBtn = document.querySelector(".order");
+const cart = document.getElementById("bag");
+let divSample = document.createElement("div");
+let imgSample = document.createElement("img");
+let pSample = document.createElement("p");
+const trashIcon = document.createElement("img")
+trashIcon.setAttribute("src",`./images/icon-delete.svg`)
+trashIcon.classList.add("trashicon")
+orderBtn.addEventListener("click", addToCart);
 
-let imageNumber = screen.children[0].getAttribute("src");
+function addToCart() {
+  cart.innerHTML = "";
+  let parentDiv = divSample.cloneNode();
+  let priceDiv = divSample.cloneNode();
+  let currentProductImage = imgSample.cloneNode();
+  let pricecontainer = pSample.cloneNode();
+  pricecontainer.innerHTML = `125$ x ${productsAmount.innerHTML}
+  <p>${productsAmount.innerHTML * 125}</p>
+`;
+priceDiv.appendChild(pricecontainer)
+  currentProductImage.setAttribute("src", imageSource);
+  parentDiv.appendChild(currentProductImage);
+  parentDiv.appendChild(priceDiv);
+  parentDiv.classList.add("product");
+  parentDiv.appendChild(trashIcon)
+  cart.appendChild(parentDiv);
+}
+
+let imageSource = screen.children[0].getAttribute("src");
 
 thumbs.forEach((image) => {
   image.addEventListener("click", () => {
     console.log(image.id);
-    let source = imageNumber.split("");
+    let source = imageSource.split("");
     switch (image.id) {
       case "thumb1 ":
         source[21] = 1;
