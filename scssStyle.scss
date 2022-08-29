@@ -20,6 +20,21 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .menu {
+        display: none;
+        height: 25px;
+        width: 30px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          display: block;
+          height: 5px;
+          width: 100%;
+          background-color: black;
+        }
+      }
       .ulcontainer {
         width: 60%;
         display: flex;
@@ -352,4 +367,52 @@ body {
   position: absolute;
   top: 0px;
   z-index: 9;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: beige;
+    overflow: scroll;
+    .container {
+      nav {
+        .menu{
+          display: flex;
+        }
+        .ulcontainer {
+          ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            border-radius: 20px;
+            // background-color: #eee;
+            z-index: 99;
+            li{
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    section {
+      flex-direction: column;
+      article{
+        
+        .cashier{
+          flex-direction: column;
+          >button{
+            margin-top: 30px;
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+  .attribution{
+    display: none;
+  }
 }
