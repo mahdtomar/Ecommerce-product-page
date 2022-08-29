@@ -134,6 +134,12 @@ orderBtn.addEventListener("click", addToCart);
 
 let imageSource = screen.children[0].getAttribute("src");
 
+
+trashIcon.addEventListener("click",()=>{
+  cart.innerHTML = ""
+})
+
+
 thumbs.forEach((image) => {
   image.addEventListener("click", () => {
     console.log(image.id);
