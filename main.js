@@ -128,17 +128,18 @@ let divSample = document.createElement("div");
 let imgSample = document.createElement("img");
 let pSample = document.createElement("p");
 const trashIcon = document.createElement("img");
+const menu = document.querySelector(".menu");
+const mainUl = document.querySelector(".navigationButtons");
+
 trashIcon.setAttribute("src", `./images/icon-delete.svg`);
 trashIcon.classList.add("trashicon");
 orderBtn.addEventListener("click", addToCart);
 
 let imageSource = screen.children[0].getAttribute("src");
 
-
-trashIcon.addEventListener("click",()=>{
-  cart.innerHTML = ""
-})
-
+trashIcon.addEventListener("click", () => {
+  cart.innerHTML = "";
+});
 
 thumbs.forEach((image) => {
   image.addEventListener("click", () => {
@@ -210,15 +211,25 @@ function addToCart() {
     let priceDiv = divSample.cloneNode();
     let currentProductImage = imgSample.cloneNode();
     let pricecontainer = pSample.cloneNode();
-    pricecontainer.innerHTML = `125$ x ${productsAmount.innerHTML}
+    let childDiv = divSample.cloneNode()
+    pricecontainer.innerHTML = `<p>125$ x ${productsAmount.innerHTML}</p>
     <p>${productsAmount.innerHTML * 125}</p>`; // calculating the price
-
+    childDiv.classList.add("flex-2")
     priceDiv.appendChild(pricecontainer);
     currentProductImage.setAttribute("src", imageSource);
-    parentDiv.appendChild(currentProductImage);
-    parentDiv.appendChild(priceDiv);
+    childDiv.appendChild(currentProductImage);
+    childDiv.appendChild(priceDiv);
+    parentDiv.appendChild(childDiv)
     parentDiv.classList.add("product");
     parentDiv.appendChild(trashIcon);
     cart.appendChild(parentDiv);
   }
 }
+menu.addEventListener("click", () => {
+  mainUl.classList.toggle("visible");
+  closecart.style.display = "block";
+});
+
+closecart.addEventListener("click", () => {
+  mainUl.classList.remove("visible");
+});

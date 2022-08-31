@@ -324,6 +324,14 @@ body {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          .flex-2{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            div{
+              margin-left: 10px;
+            }
+          }
           img {
             width: 80px;
             height: 70%;
@@ -374,13 +382,18 @@ body {
     background-color: beige;
     overflow: scroll;
     .container {
+      width: 99%;
       nav {
-        .menu{
+        padding: 0px;
+        .menu {
           display: flex;
         }
         .ulcontainer {
+          >img{
+            
+          }
           ul {
-            display: flex;
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 30px;
@@ -388,31 +401,55 @@ body {
             transform: translateX(-50%);
             width: 90%;
             border-radius: 20px;
-            // background-color: #eee;
+            background-color: #eee;
             z-index: 99;
-            li{
+            max-width: 400px;
+            &.visible {
+              display: flex;
+            }
+            li {
               text-align: center;
             }
           }
         }
       }
-    }
-    section {
-      flex-direction: column;
-      article{
-        
-        .cashier{
-          flex-direction: column;
-          >button{
-            margin-top: 30px;
-            width: 90%;
+      section {
+        flex-direction: column;
+        .gallery{
+          .gallery-container{
+            .thumbnails{
+              display: none;
+            }
           }
         }
+        article {
+          .cashier {
+            flex-direction: column;
+            // button{
+            //   width: 90%;
+            // }
+            .counter,.order{
+              max-width: 450px;
+            }
+            .counter{
+              width: 90%;
+            }
+            .order {
+              margin-top: 30px;
+              width: 90%;
+            }
+          }
+        }
+      }
+      #cart{
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
       }
     }
   }
 
-  .attribution{
+  .attribution {
     display: none;
   }
 }

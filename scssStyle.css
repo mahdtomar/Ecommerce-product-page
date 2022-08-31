@@ -478,6 +478,22 @@ body #cart .grid #bag .product {
           align-items: center;
 }
 
+body #cart .grid #bag .product .flex-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #cart .grid #bag .product .flex-2 div {
+  margin-left: 10px;
+}
+
 body #cart .grid #bag .product img {
   width: 80px;
   height: 70%;
@@ -529,15 +545,19 @@ body .attribution {
     background-color: beige;
     overflow: scroll;
   }
+  body .container {
+    width: 99%;
+  }
+  body .container nav {
+    padding: 0px;
+  }
   body .container nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
   body .container nav .ulcontainer ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -549,26 +569,48 @@ body .attribution {
             transform: translateX(-50%);
     width: 90%;
     border-radius: 20px;
+    background-color: #eee;
     z-index: 99;
+    max-width: 400px;
+  }
+  body .container nav .ulcontainer ul.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   body .container nav .ulcontainer ul li {
     text-align: center;
   }
-  body section {
+  body .container section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body section article .cashier {
+  body .container section .gallery .gallery-container .thumbnails {
+    display: none;
+  }
+  body .container section article .cashier {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body section article .cashier > button {
+  body .container section article .cashier .counter, body .container section article .cashier .order {
+    max-width: 450px;
+  }
+  body .container section article .cashier .counter {
+    width: 90%;
+  }
+  body .container section article .cashier .order {
     margin-top: 30px;
     width: 90%;
+  }
+  body .container #cart {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 90%;
   }
   .attribution {
     display: none;
