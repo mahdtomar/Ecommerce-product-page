@@ -233,3 +233,18 @@ menu.addEventListener("click", () => {
 closecart.addEventListener("click", () => {
   mainUl.classList.remove("visible");
 });
+
+// const bill = (products, tax) => {
+//   let total = 0;
+//   for(let i = 0; i < products.length; i++){
+//     if(products[i] >70){
+//       products[i] = products[i]*30/100
+//     }
+//       total += products[i]  + products[i] * tax;
+    
+//   }
+//   return total;
+// }
+
+
+//  console.log(bill([10,15,30 ,100], 0.2));

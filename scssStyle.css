@@ -556,6 +556,9 @@ body .attribution {
     display: -ms-flexbox;
     display: flex;
   }
+  body .container nav .ulcontainer > img {
+    width: 150px;
+  }
   body .container nav .ulcontainer ul {
     display: none;
     -webkit-box-orient: vertical;
